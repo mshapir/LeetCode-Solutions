@@ -10,4 +10,13 @@ var twoSum = function(nums, target) {
     }
 };
 
-// *** TWO SUM SOLUTION #1 ***
+// *** TWO SUM SOLUTION #2 ***
+
+
+var twoSum = function(nums, target) {
+    for(var i = 0; i < nums.length; i++){
+        if(nums.includes(target - nums[i], i + 1)){
+            return [i, nums.indexOf(target - nums[i], i + 1)]
+        }
+    }
+};
